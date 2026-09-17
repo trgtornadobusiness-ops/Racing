@@ -3,49 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RacingK — Oval Grand Prix</title>
+  <title>RacingK — Oval GP</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="game-wrap">
     <canvas id="game"></canvas>
-
     <div id="hud">
       <div class="hud-left">
         <div class="position"><span id="pos">1</span><small>POS</small></div>
         <div class="lap"><span id="lap">1/10</span><small>LAP</small></div>
       </div>
-      <div class="hud-center">
-        <div id="message">OVAL GRAND PRIX</div>
-      </div>
+      <div class="hud-center"><div id="message">OVAL GP</div></div>
       <div class="hud-right">
         <div class="speed"><span id="speed">0</span><small>MPH</small></div>
         <div class="gap"><span id="gap">—</span><small>GAP</small></div>
+        <button id="audio-btn" class="audio-btn" type="button">🔊 SOUND</button>
       </div>
     </div>
-
     <div id="start-screen" class="overlay">
       <div class="panel">
+        <div class="eyebrow">ARCADE OVAL RACING</div>
         <h1>RACING<span>K</span></h1>
-        <h2>OVAL GRAND PRIX</h2>
-        <p>F1-style oval racing • 24 cars • 10 laps</p>
+        <h2>OVAL GP</h2>
+        <p>Trackmania-inspired speed • 24 open-wheel cars • 10 laps</p>
         <button id="start-btn">START RACE</button>
-        <div class="controls">
-          <b>W / ↑</b> Accelerate &nbsp; <b>S / ↓</b> Brake<br>
-          <b>A / ←</b> Left &nbsp; <b>D / →</b> Right
-        </div>
+        <div class="controls"><b>W / ↑</b> Accelerate &nbsp; <b>S / ↓</b> Brake<br><b>A / ←</b> Move left &nbsp; <b>D / →</b> Move right &nbsp; <b>M</b> Sound</div>
       </div>
     </div>
-
     <div id="finish-screen" class="overlay hidden">
-      <div class="panel">
-        <h1>RACE FINISHED</h1>
-        <div id="result"></div>
-        <button id="restart-btn">RACE AGAIN</button>
-      </div>
+      <div class="panel"><div class="eyebrow">FINISH</div><h1>RACE COMPLETE</h1><div id="result"></div><button id="restart-btn">RACE AGAIN</button></div>
     </div>
   </div>
-
   <script src="game.js"></script>
 </body>
 </html>
